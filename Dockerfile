@@ -4,8 +4,7 @@
 
 FROM ubuntu:16.04
 
-RUN apt-get update
-RUN apt-get install -y apt-utils apache2 apache2-utils python3-pip python3 \
+RUN apt-get update && apt-get install -y apt-utils apache2 apache2-utils python3-pip python3 \
            libapache2-mod-wsgi-py3 python3-bottle python3-beaker python3-crypto
 RUN touch /etc/apache2/conf-available/wsgi.conf
 RUN a2enconf wsgi
