@@ -1,0 +1,22 @@
+version: '2'
+services:
+#  db:
+#    image: mysql:5.7
+#    env_file:
+#      - db-variables.env
+#    ports:
+#      - "3306:3306"
+#    restart: unless-stopped
+#    volumes:
+#      - ./dbinitscripts:/docker-entrypoint-initdb.d
+#      - ./mysqldatadir:/var/lib/mysql
+
+  web:
+    image: katanpython
+    ports:
+      - "80:80"
+    restart: unless-stopped
+#    volumes:
+#      - ./authservicepython:/var/www/authservicepython
+#    env_file:
+#      - web-variables.env
